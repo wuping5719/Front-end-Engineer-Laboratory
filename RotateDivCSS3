@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>旋转Div</title>
+  <style>
+  #loading{
+    width:400px;
+    height:320px;
+    background: url(gaoyuanyuan.png) no-repeat;
+    position:absolute;
+    animation:circling 1s linear 0s infinite;
+  }
+
+  @keyframes circling{
+    from{
+      transform:rotate(0deg);
+    }
+    to{
+      transform:rotate(360deg);
+    }
+  }
+  </style>
+</head>
+<body>
+<div id="loading"></div>
+</body>
+</html>
