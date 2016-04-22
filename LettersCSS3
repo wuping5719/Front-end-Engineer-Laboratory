@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3绘制26个字母</title>
+  <style>
+    .A{
+      position:relative;
+      margin:10px 30px 10px 5px;  /*上右下左 */
+      float: left;
+      left:30px;
+      width:60px;
+      height:91px;
+      border-bottom:solid 14px #0feee2;
+    }
+    .A:before{
+      transform:skew(-19deg,0);
+      position:absolute;
+      content:'';
+      top:12.5px;
+      left:0;
+      width:16px;
+      height:125px;
+      background-color:#0feee2;
+    }
+    .A:after{
+      transform:skew(19deg,0);
+      position:absolute;
+      content:'';
+      top:12.5px;
+      left:45px;
+      width:16px;
+      height:125px;
+      background-color:#0feee2;
+    }
+
+    .B{
+      position:relative;
+      margin:10px 20px 10px 30px;
+      float: left;
+      top:12.5px;
+      left:10px;
+      width:60px;
+      height:125px;
+      border-left:solid 16px #2056cd;
+    }
+    .B:before{
+      position:absolute;
+      content:'';
+      width:52px;
+      height:39px;
+      border-width:15px 15px 10px 0;
+      border-color:#2056cd;
+      border-style:solid;
+      border-radius:0 240%180%0 /0 180%180%0;
+   }
+   .B:after{
+      position:absolute;
+      content:'';
+      bottom:0;
+      width:58px;
+      height:43px;
+      border-width:10px 15px 15px 0;
+      border-color:#2056cd;
+      border-style:solid;
+      border-radius:0 180%220%0 /0 180%180%0;
+     }
+
+     .C{
+       position:relative;
+       margin:10px 5px 10px 10px;
+       float: left;
+       top:12.5px;
+       left:10px;
+       width:84px;
+       height:95px;
+       border-width:15px 12px 15px 16px;
+       border-color:#87adef;
+       border-style:solid;
+       border-radius:50%;
+     }
+     .C:before{
+       transform:rotate(45deg);
+       position:absolute;
+       content:'';
+       top:2px;
+       left:49px;
+       width:90px;
+       height:90px;
+       background-color:#ffffff;
+     }
+
+     .D{
+       position:relative;
+       margin:10px 20px 10px 5px;
+       float: left;
+       top:12.5px;
+       left:10px;
+       border-left:solid 15px #ade081;
+       height:125px;
+     }
+     .D:before{
+       position:absolute;
+       content:'';
+       top:0;
+       left:0;
+       width:60px;
+       height:95px;
+       border-width:15px 15px 15px 0;
+       border-color:#ade081;
+       border-style:solid;
+       border-radius:0 300%300%0 /0 180%180%0;
+      }
+
+     .E{
+        position:relative;
+        margin:10px 10px 10px 60px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:63px;
+        height:95px;
+        border-width:15px 0 15px 16px;
+        border-color:#cd2388;
+        border-style:solid;
+      }
+      .E:before{
+        position:absolute;
+        content:'';
+        top:38px;
+        left:0px;
+        width:53px;
+        height:15px;
+        background-color:#cd2388;
+      }
+
+      .F{
+        position:relative;
+        margin:10px 5px 10px 10px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:63px;
+        height:110px;
+        border-width:15px 0 0 16px;
+        border-color:#668899;
+        border-style:solid;
+       }
+      .F:before{
+        position:absolute;
+        content:'';
+        top:38px;
+        left:0px;
+        width:53px;
+        height:15px;
+        background-color:#668899;
+      }
+
+      .G{
+        position:relative;
+        margin:10px 5px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:84px;
+        height:95px;
+        border-width:15px 12px 15px 16px;
+        border-color:#f0af00;
+        border-style:solid;
+        border-radius:50%;
+       }
+       .G:before{
+         transform:rotate(45deg);
+         position:absolute;
+         content:'';
+         top:2px;
+         left:48px;
+         background-color:#ffffff;
+         width:90px;
+         height:90px;
+       }
+      .G:after{
+        position:absolute;
+        content:'';
+        bottom:0.5px;
+        right:7px;
+        width:28px;
+        height:36px;
+        border-width:13px 14px 0 0;
+        border-color:#f0af00;
+        border-style:solid;
+      }
+
+      .H{
+        position:relative;
+        margin:10px 10px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:60px;
+        height:125px;
+        border-width:0 16px 0 16px;
+        border-color:#cde680;
+        border-style:solid;
+       }
+       .H:before{
+        position:absolute;
+        content:'';
+        top:53px;
+        left:0;
+        width:60px;
+        height:14px;
+        background-color:#cde680;
+       }
+
+       .I{
+        z-index:1;
+        position:relative;
+        margin:10px 10px 10px 10px;
+        float: left;
+        top:12.5px;
+        left:20px;
+        width:16px;
+        height:125px;
+        background-color:#020a0f;
+       }
+
+      .J{
+         position:relative;
+         margin:10px 5px 10px 5px;
+         float: left;
+         top:12.5px;
+         left:-5px;
+         width:75px;
+         height:66px;
+         border-right:solid 16px #b0c0d0;
+      }
+      .J:before{
+         position:absolute;
+         content:'';
+         bottom:-60px;
+         right:-16px;
+         width:50px;
+         height:60px;
+         border-width:0 16px 15px 14px;
+         border-color:#b0c0d0;
+         border-style:solid;
+         border-radius:0 0 75%75%;
+       }
+       .J:after{
+         transform:rotate(-40deg);
+         position:absolute;
+         content:'';
+         top:40px;
+         left:-20px;
+         width:60px;
+         height:60px;
+         background-color:#ffffff;
+        }
+
+      .K{
+       position:relative;
+       margin:10px 5px 10px 5px;
+       float: left;
+       top:12.5px;
+       left:10px;
+       width:80px;
+       height:125px;
+       border-left:solid 16px #ce6688;
+       overflow:hidden;
+      }
+      .K:before{
+        transform:skew(-43deg,0);
+        position:absolute;
+        content:'';
+        top:0;
+        left:16px;
+        width:19px;
+        height:84px;
+        background-color:#ce6688;
+      }
+      .K:after{
+        transform:skew(30deg,0);
+        position:absolute;
+        content:'';
+        bottom:0;
+        right:25px;
+        width:18px;
+        height:80px;
+        background-color:#ce6688;
+       }
+
+      .L{
+        position:relative;
+        margin:10px 5px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:63px;
+        height:110px;
+        border-width:0 0 15px 16px;
+        border-color:#998800;
+        border-style:solid;
+       }
+
+       .M{
+        position:relative;
+        margin:10px 5px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:80px;
+        height:125px;
+        border-width:0 15px 0 15px;
+        border-color:#ff0000;
+        border-style:solid;
+       }
+       .M:before{
+        transform:skew(20deg,0);
+        position:absolute;
+        content:'';
+        top:0;
+        left:14px;
+        width:12px;
+        height:110px;
+        background-color:#ff0000;
+       }
+       .M:after{
+        transform:skew(-20deg,0);
+        position:absolute;
+        content:'';
+        top:0;
+        right:14px;
+        width:12px;
+        height:110px;
+        background-color:#ff0000;
+       }
+
+       .N{
+        position:relative;
+        margin:10px 5px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:63px;
+        height:125px;
+        border-width:0 15px 0 15px;
+        border-color:#9aff02;
+        border-style:solid;
+       }
+       .N:before{
+        transform:skew(30deg,0);
+        position:absolute;
+        content:'';
+        top:0;
+        left:24px;
+        width:15px;
+        height:125px;
+        background-color:#9aff02;
+      }
+
+      .O{
+        position:relative;
+        margin:10px 5px 10px 5px;
+        float: left;
+        top:12.5px;
+        left:10px;
+        width:70px;
+        height:97px;
+        border-width:14px 16px 14px 16px;
+        border-color:#ffff40;
+        border-style:solid;
+        border-radius:55% /52%;
+       }
+
+      .P{
+       position:relative;
+       margin:10px 5px 10px 5px;
+       float: left;
+       top:12.5px;
+       left:10px;
+       width:60px;
+       height:125px;
+       border-left:solid 16px #00ffff;
+      }
+      .P:before{
+       position:absolute;
+       content:'';
+       width:56px;
+       height:50px;
+       border-width:13px 15px 13px 0;
+       border-color:#00ffff;
+       border-style:solid;
+       border-radius:0 220%220%0 /0 180%180%0;
+      }
+
+      .Q {
+       z-index:-1;
+       position:relative;
+       margin:10px 5px 10px 5px;
+       float: left;
+       top:12.5px;
+       left:10px;
+       width:70px;
+       height:97px;
+       border-width:14px 16px 14px 16px;
+       border-color:#deff00;
+       border-style:solid;
+       border-radius:55% /52%;
+     }
+     .Q:before{
+       transform:rotate(-84deg);
+       position:absolute;
+       content:'';
+       top:82px;
+       left:49px;
+       width:16px;
+       height:48px;
+       border-width:16px 0 13px 13px;
+       border-color:#deff00;
+       border-style:solid;
+       border-radius:200%0 0 200% /100%0 0 100%;
+     }
+     .Q:after{
+       transform:rotate(-18deg);
+       position:absolute;
+       content:'';
+       bottom:-35px;
+       right:-44px;
+       width:30px;
+       height:30px;
+       background-color:#ffffff;
+     }
+
+    .R{
+     position:relative;
+     margin:10px 5px 10px 5px;
+     float: left;
+     top:12.5px;
+     left:10px;
+     width:60px;
+     height:125px;
+     border-left:solid 16px #a0b0c0;
+    }
+    .R:before{
+     position:absolute;
+     content:'';
+     width:52px;
+     height:44px;
+     border-width:13px 15px 13px 0;
+     border-color:#a0b0c0;
+     border-style:solid;
+     border-radius:0 220%220%0 /0 180%180%0;
+    }
+    .R:after{
+     transform:skew(32deg,0);
+     position:absolute;
+     content:'';
+     bottom:0;
+     left:38px;
+     width:18px;
+     height:58px;
+     background-color:#a0b0c0;
+   }
+
+   .S{
+     transform:rotate(14deg);
+     position:relative;
+     margin:10px 5px 10px 5px;
+     float: left;
+     width:105px;
+     height:150px;
+     top:10px;
+     left:10px;
+   }
+   .S:before{
+     transform:rotate(18deg);
+     position:absolute;
+     content:'';
+     width:44px;
+     height:40px;
+     border-width:14px 0 15px 15.5px;
+     border-color:#ffaf80;
+     border-style:solid;
+     border-radius:220%0 0 150% /150%0 0 100%;
+   }
+   .S:after{
+    transform:rotate(198deg);
+    position:absolute;
+    content:'';
+    top:65px;
+    left:21px;
+    width:52px;
+    height:44px;
+    border-width:14px 0 15px 15px;
+    border-color:#ffaf80;
+    border-style:solid;
+    border-radius:240%0 0 110% /140%0 0 100%;
+    }
+
+    .T{
+      position:relative;
+      margin:10px 5px 10px 5px;
+      float: left;
+      top:12.5px;
+      left:10px;
+      width:100px;
+      height:125px;
+      border-top:solid 15px #ffd0e0;
+    }
+   .T:before{
+    position:absolute;
+    content:'';
+    top:0;
+    left:42px;
+    width:16px;
+    height:110px;
+    background-color:#ffd0e0;
+   }
+
+   .U{
+    position:relative;
+    margin:10px 5px 10px 5px;
+    float: left;
+    top:12.5px;
+    left:10px;
+    width:60px;
+    height:80px;
+    border-width:0 16px 0 16px;
+    border-color:#ff8f01;
+    border-style:solid;
+   }
+   .U:before{
+    position:absolute;
+    content:'';
+    top:65px;
+    left:-16px;
+    width:60px;
+    height:45px;
+    border-width:0 16px 15px 16px;
+    border-color:#ff8f01;
+    border-style:solid;
+    border-radius:0 0 200%200% /0 0 300%300%;
+   }
+
+   .V{
+     position:relative;
+     margin:10px 5px 10px 5px;
+     float: left;
+     top:12.5px;
+     left:30px;
+     width:59px;
+    }
+    .V:before{
+     transform:skew(18deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     left:0;
+     height:125px;
+     border-left:solid 16px #008800;
+   }
+   .V:after{
+     transform:skew(-18deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     right:0;
+     height:125px;
+     border-left:solid 16px #008800;
+   }
+
+   .W{
+     position:relative;
+     margin:10px 5px 10px 40px;
+     float: left;
+     top:12.5px;
+     left:25px;
+     width:100px;
+    }
+    .W:before{
+     transform:skew(11deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     left:0;
+     width:42px;
+     height:125px;
+     border-width:0 13px 0 15px;
+     border-color:#000000;
+     border-style:solid;
+    }
+    .W:after{
+     transform:skew(-11deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     right:0;
+     width:42px;
+     height:125px;
+     border-width:0 15px 0 13px;
+     border-color:#000000;
+     border-style:solid;
+    }
+
+    .X{
+     position:relative;
+     margin:10px 5px 10px 25px;
+     float: left;
+     top:12.5px;
+     left:50px;
+     width:16px;
+     height:125px;
+    }
+    .X:before{
+     transform:skew(32deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     left:0;
+     width:16px;
+     height:125px;
+     background-color:#0066ff;
+    }
+    .X:after{
+     transform:skew(-32deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     right:0;
+     width:16px;
+     height:125px;
+     background-color:#0066ff;
+    }
+
+    .Y{
+     position:relative;
+     margin:10px 5px 10px 80px;
+     float: left;
+     top:92.5px;
+     left:52px;
+     width:16px;
+     height:50px;
+     background-color:#22ff55;
+    }
+    .Y:before{
+     transform:skew(28deg,0);
+     position:absolute;
+     content:'';
+     top:-80px;
+     left:-21px;
+     width:16px;
+     height:80px;
+     background-color:#22ff55;
+    }
+    .Y:after{
+     transform:skew(-28deg,0);
+     position:absolute;
+     content:'';
+     top:-80px;
+     right:-21px;
+     width:16px;
+     height:80px;
+     background-color:#22ff55;
+    }
+
+    .Z{
+     position:relative;
+     margin:20px 5px 10px 80px;
+     float: left;
+     top:12.5px;
+     left:10px;
+     width:90px;
+     height:95px;
+     border-width:15px 0 15px 0;
+     border-color:#336699;
+     border-style:solid;
+    }
+    .Z:before{
+     transform:skew(-37deg,0);
+     position:absolute;
+     content:'';
+     top:0;
+     left:36px;
+     width:18px;
+     height:95px;
+     background-color:#336699;
+    }
+  </style>
+</head>
+<body>
+  <!-- 字母A -->
+  <div id="A1" class="A"></div>
+  <!-- 字母B -->
+  <div id="B2" class="B"></div>
+  <!-- 字母C -->
+  <div id="C3" class="C"></div>
+  <!-- 字母D -->
+  <div id="D4" class="D"></div>
+  <!-- 字母E -->
+  <div id="E5" class="E"></div>
+  <!-- 字母F -->
+  <div id="F6" class="F"></div>
+  <!-- 字母G -->
+  <div id="G7" class="G"></div>
+  <!-- 字母H -->
+  <div id="H8" class="H"></div>
+  <!-- 字母I -->
+  <div id="I9" class="I"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+
+  <!-- 字母J -->
+  <div id="J10" class="J"></div>
+  <!-- 字母K -->
+  <div id="K11" class="K"></div>
+  <!-- 字母L -->
+  <div id="L12" class="L"></div>
+  <!-- 字母M -->
+  <div id="M13" class="M"></div>
+  <!-- 字母N -->
+  <div id="N14" class="N"></div>
+  <!-- 字母O -->
+  <div id="O15" class="O"></div>
+  <!-- 字母O -->
+  <div id="P16" class="P"></div>
+  <!-- 字母Q -->
+  <div id="Q17" class="Q"></div>
+  <!-- 字母R -->
+  <div id="R18" class="R"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+
+  <!-- 字母S -->
+  <div id="S19" class="S"></div>
+  <!-- 字母T -->
+  <div id="T20" class="T"></div>
+  <!-- 字母U -->
+  <div id="U21" class="U"></div>
+  <!-- 字母V -->
+  <div id="V22" class="V"></div>
+  <!-- 字母W -->
+  <div id="W23" class="W"></div>
+  <!-- 字母X -->
+  <div id="X24" class="X"></div>
+  <!-- 字母Y -->
+  <div id="Y25" class="Y"></div>
+  <!-- 字母Z -->
+  <div id="Z26" class="Z"></div>
+</body>
+</html>
