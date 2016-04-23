@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>ImageCSS3</title>
+<style>
+div {
+	width: 200px;
+	height: 100px;
+	margin: 10px 5px;
+	border: 1px solid #ddd000;
+}
+#LinearStartToEnd {
+  float:left;
+  background: linear-gradient(#ff0000, #00ff00);
+}
+#LinearPercentage {
+  float:left;
+  background: linear-gradient(#0000ff, #ff0000 52%, #00ff00);
+}
+#LinearAnglePercentage {
+  float:left;
+  background: linear-gradient(90deg, #ff0000 20%, #00ff00 50%, #000000 80%);
+}
+#LinearAngle {
+  float:left;
+  background: linear-gradient(30deg, #ffff00 30%, #ff0000, #00ff00);
+}
+#LinearTopRight {
+  float:left;
+  background: linear-gradient(to right top, #00ff00, #ff0000 50%, #0000ff);
+}
+
+#RadialCenterCircle {
+  float:left;
+	background: radial-gradient(circle at center, #ff0000, #ffff00, #00ffff);
+}
+#RadialClosestSide {
+  float:left;
+	background: radial-gradient(circle closest-side, #ff0000, #00ff00, #ffff00);
+}
+#RadialFarthestSide {
+  float:left;
+	background: radial-gradient(farthest-side, #ff0000 20%, #ffff00 60%, #00ff00 80%);
+}
+#RadialRightTop {
+  float:left;
+	background: radial-gradient(at right top, #ff0000, #ffff00, #00ff00);
+}
+#RadialRadiusCenter {
+  float:left;
+	background: radial-gradient(farthest-side at top right, #ff0000, #ffff00, #01fefe);
+}
+#RadialGroup {
+  float:left;
+	background:
+				radial-gradient(farthest-side at top right, #ff0000, #ffff00, #009f00, transparent),
+				radial-gradient(60px at top left, #ff0000, #ffff00, #00ff0e);
+}
+
+#RepeatingLinearPercentage{
+  float:left;
+	background: repeating-linear-gradient(#ff0000, #00ff00 10%, #000000 15%);
+}
+#RepeatingLinearRight {
+  float:left;
+	background: repeating-linear-gradient(to right, #ff0000, #00ff00 10%, #000000 15%);
+}
+#RepeatingLinearAngle {
+  float:left;
+	background: repeating-linear-gradient(45deg, #ff0000, #00ff00 10%, #0000ff 15%);
+}
+#RepeatingLinearBottomLeft {
+  float:left;
+	background: repeating-linear-gradient(to bottom left, #00ffff, #ff0000 10%, #00ff00 15%);
+}
+
+#RepeatingRadialCircle {
+  float:left;
+	background: repeating-radial-gradient(circle, #ff0000 0, #00ff00 10%, #0000ff 15%);
+}
+#RepeatingRadialTopLeft {
+  float:left;
+	background: repeating-radial-gradient(at top left, #ff0000, #00ff00 10%, #0de0f0 15%, #ffff00 20%, #000000 25%);
+}
+#RepeatingRadialClosestCorner {
+  float:left;
+	background: repeating-radial-gradient(circle closest-corner at 20px 50px, #00ff00, #ff0000 10%, #00ffff 20%, #ffff00 30%, #ff00ff 40%);
+}
+
+</style>
+</head>
+<body>
+<!-- 指定线性渐变起止色 -->
+<div id="LinearStartToEnd"></div>
+<!-- 指定线性渐变起止色位置 -->
+<div id="LinearPercentage"></div>
+<!-- 指定线性渐变颜色渐变方向和起止色位置 -->
+<div id="LinearAnglePercentage"></div>
+<!-- 指定线性渐变颜色渐变方向 -->
+<div id="LinearAngle"></div>
+<!-- 设置渐变从右上到左下 -->
+<div id="LinearTopRight"></div>
+
+<!-- 浮动Div换行，此处指定Div宽高和边界，是为了覆盖前面定义的Div统一CSS样式，
+ 可以尝试去掉指定的Div宽高和边界，看看效果 -->
+<div style="width:0; height:0; border:none; clear:both"></div>
+<!-- 以中心点为圆心的圆形径向渐变 -->
+<div id="RadialCenterCircle"></div>
+<!-- 径向渐变半径长度：圆心到离圆心最近边的长度 -->
+<div id="RadialClosestSide"></div>
+<!-- 径向渐变半径长度：圆心到离圆心最远边的长度 -->
+<div id="RadialFarthestSide"></div>
+<!-- 左边为径向渐变圆心的横坐标值,顶边为径向渐变圆心的纵坐标值 -->
+<div id="RadialRightTop"></div>
+<!-- 同时指定径向渐变的圆心和半径 -->
+<div id="RadialRadiusCenter"></div>
+<!-- 径向渐变组合 -->
+<div id="RadialGroup"></div>
+
+<div style="width:0; height:0; border:none; clear:both"></div>
+<!-- 指定颜色起止色位置的重复线性渐变 -->
+<div id="RepeatingLinearPercentage"></div>
+<!-- 从左到右渐变的重复线性渐变 -->
+<div id="RepeatingLinearRight"></div>
+<!-- 渐变角度为45度的重复线性渐变 -->
+<div id="RepeatingLinearAngle"></div>
+<!-- 从左下到右上的重复线性渐变 -->
+<div id="RepeatingLinearBottomLeft"></div>
+
+<div style="width:0; height:0; border:none; clear:both"></div>
+<!-- 圆形重复径向渐变 -->
+<div id="RepeatingRadialCircle"></div>
+<!-- 渐变方向为左上到右下的重复径向渐变 -->
+<div id="RepeatingRadialTopLeft"></div>
+<!-- 重复径向渐变：渐变半径长度为从圆心到离圆心最近的角的距离 -->
+<div id="RepeatingRadialClosestCorner"></div>
+
+</body>
+</html>
