@@ -1,6 +1,8 @@
 # Front-end engineering laboratory  
 This project is a personal small laboratory on the front end technology.  
 
+     10位前端大神：  
+
 <p style="margin-top: 0px; margin-bottom: 1.5em; padding-top: 0px; padding-bottom: 0px; list-style: none; color: rgb(51, 51, 51); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 14px; line-height: 24px;">
 	<strong>1. Paul Irish</strong>
 </p>
