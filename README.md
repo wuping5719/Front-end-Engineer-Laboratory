@@ -1,4 +1,4 @@
-# Front-end engineering laboratory  
+# Front-end Engineer Laboratory 
 This project is a personal small laboratory on the front end technology.  
 
 <strong>10位前端大神：</strong>  
