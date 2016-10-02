@@ -1,4 +1,4 @@
-# (前端攻城狮的实验室)Front-end Engineer Laboratory 
+# 前端攻城狮的实验室(Front-end Engineer Laboratory)
 This project is a personal small laboratory on the front end technology.  
 
 **# 1.10位前端大神(10 in front of God)**  
