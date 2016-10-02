@@ -1,7 +1,7 @@
-# Front-end Engineer Laboratory 
+# (前端攻城狮的实验室)Front-end Engineer Laboratory 
 This project is a personal small laboratory on the front end technology.  
 
-**# 1.10位前端大神**  
+**# 1.10位前端大神(10 in front of God)**  
 &nbsp;&nbsp;Source address：<a href="https://github.com/wuping5719/Front-end-Laboratory/blob/master/FrontGod.md" style="cursor: pointer; color: rgb(0, 102, 204); text-decoration: none;">Open URL</a> 
 
 **# 2.CSS3颜色渐变(ColorGradient)**  
