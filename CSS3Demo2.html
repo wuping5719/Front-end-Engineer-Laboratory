@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3实现基本图形: Demo2</title>
+  <style>
+   #TV {
+     float: left;
+     position: relative;
+     width: 160px;
+     height: 120px;
+     margin: 10px 20px;
+     background: black;
+     border-radius: 50% / 10%;
+     color: white;
+     text-align: center;
+     text-indent: .1em;
+  }
+  #TV:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+   }
+
+   #Chevron {
+     float: left;
+     margin: 16px 5px;
+     position: relative;
+     text-align: center;
+     padding: 12px;
+     margin-bottom: 6px;
+     height: 60px;
+     width: 200px;
+   }
+   #Chevron:before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 51%;
+     background: red;
+     -webkit-transform: skew(0deg, 6deg);
+     -moz-transform: skew(0deg, 6deg);
+     -ms-transform: skew(0deg, 6deg);
+     -o-transform: skew(0deg, 6deg);
+     transform: skew(0deg, 6deg);
+   }
+   #Chevron:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100%;
+     width: 50%;
+     background: red;
+     -webkit-transform: skew(0deg, -6deg);
+     -moz-transform: skew(0deg, -6deg);
+     -ms-transform: skew(0deg, -6deg);
+     -o-transform: skew(0deg, -6deg);
+     transform: skew(0deg, -6deg);
+   }
+
+   #MagnifyingGlass{
+      float: left;
+      font-size: 10em; /* This controls the size. */
+      margin: 10px 10px;
+      display: inline-block;
+      width: 0.4em;
+      height: 0.4em;
+      border: 0.1em solid green;
+      position: relative;
+      border-radius: 0.35em;
+   }
+   #MagnifyingGlass:before{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      right: -0.25em;
+      bottom: -0.1em;
+      border-width: 0;
+      background: green;
+      width: 0.35em;
+      height: 0.08em;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+   }
+
+   #FacebookIcon {
+     float: left;
+     margin: 16px 16px;
+     background: blue;
+     text-indent: -999em;
+     width: 100px;
+     height: 110px;
+     border-radius: 5px;
+     position: relative;
+     overflow: hidden;
+     border: 15px solid blue;
+     border-bottom: 0;
+  }
+  #FacebookIcon::before {
+    content: "/20";
+    position: absolute;
+    background: blue;
+    width: 40px;
+    height: 90px;
+    bottom: -30px;
+    right: -37px;
+    border: 20px solid #eee;
+    border-radius: 25px;
+  }
+  #FacebookIcon::after {
+    content: "/20";
+    position: absolute;
+    width: 55px;
+    top: 50px;
+    height: 20px;
+    background: #eee;
+    right: 5px;
+  }
+
+  #Cross {
+    float: left;
+    margin: 10px 30px;
+    background: red;
+    height: 100px;
+    position: relative;
+    width: 20px;
+  }
+  #Cross:after {
+    background: red;
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+  }
+  </style>
+</head>
+<body>
+  <!-- 电视屏幕(TV Screen) -->
+  <div id="TV"></div>
+  <!-- 雪佛龙(Chevron) -->
+  <div id="Chevron"></div>
+  <!-- 放大镜(Magnifying Glass) -->
+  <div id="MagnifyingGlass"></div>
+  <!-- Facebook图标(Facebook Icon) -->
+  <div id="FacebookIcon"></div>
+  <!-- 十字架(Cross) -->
+  <div id="Cross"></div>
+
+  <!-- 浮动Div换行 -->
+  <div style="clear:both">
+</body>
+</html>
