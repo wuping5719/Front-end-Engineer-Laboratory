@@ -27,8 +27,8 @@ This project is a personal small laboratory on the front end technology.
   
 **# 8.CSS3太阳系(SolarSystemCSS3)**  
 &nbsp;&nbsp;Source address：<a href="https://github.com/wuping5719/Front-end-Laboratory/blob/master/SolarSystemCSS3.html" >Open URL</a> 
-<p><img src="http://images.cnblogs.com/cnblogs_com/wp5719/831982/t_11.png"/></p>
+<p><img src="http://images.cnblogs.com/cnblogs_com/wp5719/831982/o_11.png"/></p>
 
 **# 9.CSS3图形Demo1(CSS3Demo1)**  
 &nbsp;&nbsp;Source address：<a href="https://github.com/wuping5719/Front-end-Laboratory/blob/master/CSS3Demo1.html" >Open URL</a> 
-<p><img src="http://images.cnblogs.com/cnblogs_com/wp5719/831982/t_12.png"/></p>
+<p><img src="http://images.cnblogs.com/cnblogs_com/wp5719/831982/o_12.png"/></p>
