@@ -4,7 +4,7 @@
 	<strong>1. Paul Irish</strong>
 </p>
 <p style="margin-top: 0px; margin-bottom: 1.5em; padding-top: 0px; padding-bottom: 0px; list-style: none; color: rgb(51, 51, 51); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 14px; line-height: 24px; text-align: center;">
-	<a href="http://cms.csdnimg.cn/article/201408/01/53db25ef8ef61.jpg" target="_blank" style="cursor: pointer; color: rgb(0, 102, 204); text-decoration: none;"><img src="http://cms.csdnimg.cn/article/201408/01/53db25ef8ef61_middle.jpg" border="0" style="vertical-align: middle; border: none;" alt="" />&nbsp;</a><br />
+	<a href="http://cms.csdnimg.cn/article/201408/01/53db25ef8ef61.jpg" target="_blank" style="cursor: pointer; color: rgb(0, 102, 204); text-decoration: none;"><img src="http://cms.csdnimg.cn/article/201408/01/53db25ef8ef61_middle.jpg"  />&nbsp;</a><br />
 	
 </p>
 <p style="margin-top: 0px; margin-bottom: 1.5em; padding-top: 0px; padding-bottom: 0px; list-style: none; color: rgb(51, 51, 51); font-family: Helvetica, Tahoma, Arial, sans-serif; font-size: 14px; line-height: 24px;">
