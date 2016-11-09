@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS3中的flexbox布局</title>
+<style>
+   .ChildContainer {
+     background:#F00; 
+	 color:#FFF;
+	 width: 50px;
+	 height: 50px;
+	 margin:10px 30px;
+   }
+   
+   /* 横向布局 */
+   .HorizontalLayoutContainer {
+     display: flex;
+     flex-direction: row;   /* 将 flex-direction 属性的值从 column 改成 row , 子元素就会重新回到横向布局 */
+     justify-content: center;    /* justify-content 属性让所有子元素都居中对齐 */
+     align-items: center;   /* 使用 align-items 属性来控制子元素的竖向对齐方式*/
+	 width: 500px;
+	 height: 100px;
+	 background:#0F0; 
+	 margin:10px;
+   }
+   
+   /* 纵向布局 */
+   .VerticalLayoutContainer {
+     display: flex;
+     flex-direction: column;
+	 width: 100px;
+	 height: 200px;
+	 background:#0F0; 
+	 margin:10px;
+   }
+   
+   #Child1 {
+     align-self: flex-end;
+   }
+</style>
+</head>
+<body>
+  <!-- 横向布局 -->
+  <div class="HorizontalLayoutContainer">
+     <div id="Child1" class="ChildContainer" > A </div>
+	 <div id="Child2" class="ChildContainer" > B </div>
+	 <div id="Child3" class="ChildContainer" > C </div>
+  </div>
+  
+  <!-- 纵向布局 -->
+  <div class="VerticalLayoutContainer">
+     <div id="Child4" class="ChildContainer" > D </div>
+	 <div id="Child5" class="ChildContainer" > E </div>
+	 <div id="Child6" class="ChildContainer" > F </div>
+  </div>
+  
+</body>
+</html>
