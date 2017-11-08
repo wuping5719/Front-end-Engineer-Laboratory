@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+  <!--
+  <div ng-app="">
+     <p>我的第一个表达式: {{ 100 - 1 }}</p>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="quantity=8; cost=111">
+     <p>总价1： {{ quantity * cost }}</p>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="quantity=6; cost=111">
+     <p>总价2： <span ng-bind="quantity * cost"></span></p>
+  </div>
+  -->
+
+  <div ng-app="" ng-init="firstName='Myra'; lastName='Ma'">
+     <p>My Girl's Name： {{ firstName + " " + lastName }}</p>
+  </div>
+
+  <!--
+  <div ng-app="" ng-init="person={firstName:'John', lastName:'Cat'}">
+     <p>姓为 {{ person.lastName }}</p>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="person={firstName:'Kobe',lastName:'Jone'}">
+     <p>姓为 <span ng-bind="person.lastName"></span></p>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="points=[1, 3, 5, 7, 9]">
+     <p>第三个值为 {{ points[2] }}</p>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="points=[2, 4, 6, 8, 10]">
+     <p>第三个值为 <span ng-bind="points[2]"></span></p>
+  </div>
+  -->
+
+</body>
+</html>
