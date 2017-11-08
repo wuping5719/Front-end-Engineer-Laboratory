@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+  <!--
+  <div ng-app="" ng-init="firstName='Tom'">
+     <p>在输入框中尝试输入：</p>
+     <p>姓名：<input type="text" ng-model="firstName"></p>
+     <p>你输入的为： {{ firstName }}</p>
+  </div>
+  -->
+
+
+  <div ng-app="" ng-init="quantity=1;price=5">
+    <h2>价格计算器</h2>
+    数量： <input type="number" ng-model="quantity">
+    价格： <input type="number" ng-model="price">
+    <p><b>总价：</b> {{ quantity * price }}</p>
+  </div>
+
+  <!--
+  <div ng-app="" ng-init="names=['Nick','Myra','Tom']">
+     <p>使用 ng-repeat 来循环数组</p>
+     <ul>
+        <li ng-repeat="x in names">
+           {{ x }}
+        </li>
+     </ul>
+  </div>
+  -->
+
+  <!--
+  <div ng-app="" ng-init="names=[
+     {name:'Nick',country:'China'},
+     {name:'Myra',country:'New Zealand'},
+     {name:'Tom',country:'Denmark'}]">
+    <p>循环对象：</p>
+    <ul>
+       <li ng-repeat="x    in names">
+         {{ x.name + ', ' + x.country }}
+      </li>
+    </ul>
+  </div>
+  -->
+
+</body>
+</html>
