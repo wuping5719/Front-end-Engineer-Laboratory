@@ -10,9 +10,9 @@
 -->
 <script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
 </head>
-
 <body>
 
+<!--
 <form ng-app="" name="myForm">
     Email:
     <input type="email" name="myAddress" ng-model="text">
@@ -20,7 +20,16 @@
 </form>
 
 <p>在输入框中输入你的邮箱地址，如果不是一个合法的邮箱地址，会弹出提示信息。</p>
+-->
+
+<form ng-app="" name="myForm" ng-init="myText = 'test@Nick.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required></p>
+    <h1>状态</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+</form>
 
 </body>
-
 </html>
