@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+  <p>欢迎信息:</p>
+  <h1>{{myWelcome}}</h1>
+</div>
+<p> $http 服务向服务器请求信息，返回的值放入变量 "myWelcome" 中。</p>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope, $http) {
+    $http.get("template/welcome.html").then(function (response) {
+        $scope.myWelcome = response.data;
+    });
+  });
+</script>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+  <p>两秒后显示信息:</p>
+  <h1>{{myHeader}}</h1>
+</div>
+<p>$timeout 访问在规定的毫秒数后执行指定函数。</p>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $timeout) {
+  $scope.myHeader = "Hello World!";
+  $timeout(function () {
+      $scope.myHeader = "How are you today?";
+  }, 2000);
+});
+</script>
+-->
+
+<div ng-app="myApp" ng-controller="myCtrl">
+   <p>现在时间是:</p>
+   <h1>{{theTime}}</h1>
+</div>
+<p>$interval 访问在指定的周期(以毫秒计)来调用函数或计算表达式。</p>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+
+</body>
+</html>
