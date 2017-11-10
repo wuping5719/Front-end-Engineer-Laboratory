@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+<!--
+   过滤器	        描述
+ currency	   格式化数字为货币格式。
+ filter	     从数组项中选择一个子集。
+ lowercase	 格式化字符串为小写。
+ uppercase	 格式化字符串为大写。
+ orderBy	   根据某个表达式排列数组。
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="costCtrl">
+   <input type="number" ng-model="quantity">
+   <input type="number" ng-model="price">
+   <p>总价 = {{ (quantity * price) | currency }}</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('costCtrl', function($scope) {
+    $scope.quantity = 2;
+    $scope.price = 10.00;
+});
+</script>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="namesCtrl">
+  <p>循环对象:</p>
+  <ul>
+     <li ng-repeat="x in names | orderBy:'country'">
+       {{ x.name + ', ' + x.country }}
+     </li>
+  </ul>
+</div>
+<script src="js/namesController.js"></script>
+-->
+
+<!--
+<div ng-app="myApp" ng-controller="namesCtrl">
+  <p>输入过滤:</p>
+  <p><input type="text" ng-model="test"></p>
+  <ul>
+    <li ng-repeat="x in names | filter:test | orderBy:'country'">
+       {{ (x.name | uppercase) + ', ' + x.country }}
+    </li>
+  </ul>
+</div>
+<script src="js/namesController.js"></script>
+-->
+
+<div ng-app="myApp" ng-controller="myCtrl">
+  姓名: {{ msg | reverse }}
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.msg = "Nick";
+});
+app.filter('reverse', function() {   //可 以注入依赖
+    return function(text) {
+        return text.split("").reverse().join("");
+    }
+});
+</script>
+
+</body>
+</html>
