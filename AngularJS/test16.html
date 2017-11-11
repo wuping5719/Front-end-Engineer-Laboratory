@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+
+<body>
+
+<div ng-app="myApp" ng-controller="formCtrl">
+  <form novalidate>
+    First Name:<br>
+    <input type="text" ng-model="user.firstName"><br>
+    Last Name:<br>
+    <input type="text" ng-model="user.lastName">
+    <br><br>
+    <button ng-click="reset()">RESET</button>
+  </form>
+  <p>form = {{user}}</p>
+  <p>master = {{master}}</p>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('formCtrl', function($scope) {
+      $scope.master = {firstName: "Myra", lastName: "Ma"};
+      $scope.reset = function() {
+          $scope.user = angular.copy($scope.master);
+      };
+      $scope.reset();
+  });
+</script>
+
+<!--
+<div ng-app="">
+  <form>
+    选中复选框，显示标题:
+    <input type="checkbox" ng-model="myVar">
+  </form>
+  <h1 ng-show="myVar">My Header</h1>
+</div>
+
+<p>标题使用了 ng-show 指令，复选框选中后显示 h1 标签内容。</p>
+-->
+
+<!--
+<body ng-app="">
+<form>
+  选择一个选项:
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="tuts">Tutorials
+  <input type="radio" ng-model="myVar" value="cars">Cars
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Cars</h1>
+     <p>Read about cars.</p>
+  </div>
+</div>
+
+<p>ng-switch 指令根据单选按钮的选择结果显示或隐藏 HTML 区域。</p>
+-->
+
+</body>
+</html>
