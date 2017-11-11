@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+<!--
+<div ng-app="myApp" ng-controller="myCtrl">
+  <select ng-init="selectedName = names[0]" ng-model="selectedName" ng-options="x for x in names"></select>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+      $scope.names = ["Google", "Github", "Taobao"];
+  });
+</script>
+
+<p>该实例演示了 ng-options 指令的使用。</p>
+-->
+
+<div ng-app="myApp" ng-controller="myCtrl">
+  <p>选择一辆车:</p>
+  <select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars"></select>
+  <p>你选择的是: {{selectedCar.brand}}</p>
+  <p>型号为: {{selectedCar.model}}</p>
+  <p>颜色为: {{selectedCar.color}}</p>
+  <p>下拉列表中的选项也可以是对象的属性。</p>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.cars = {
+        car01 : {brand : "Ford", model : "Mustang", color : "red"},
+        car02 : {brand : "Fiat", model : "500", color : "white"},
+        car03 : {brand : "Volvo", model : "XC90", color : "black"}
+    }
+});
+</script>
+
+</body>
+</html>
