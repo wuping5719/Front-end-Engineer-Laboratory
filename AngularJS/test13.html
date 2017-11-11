@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="http://cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="" ng-init="mySwitch=true">
+  <p><button ng-disabled="mySwitch">点我!</button></p>
+  <p><input type="checkbox" ng-model="mySwitch"/>按钮</p>
+  <p>{{ mySwitch }}</p>
+</div>
+
+<!--
+<p ng-show="true">我是可见的。</p>
+<p ng-show="false">我是不可见的。</p>
+
+<p ng-hide="true">我是不可见的。</p>
+<p ng-hide="false">我是可见的。</p>
+-->
+
+</body>
+</html>
