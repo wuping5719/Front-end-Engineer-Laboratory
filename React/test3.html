@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+  <div id="example1"></div>
+  <script type="text/babel">
+    var HelloMessage = React.createClass({
+      render: function() {
+        return <h1>I love Myra Ma!</h1>;
+      }
+    });
+
+    ReactDOM.render(
+      <HelloMessage />,
+      document.getElementById('example1')
+    );
+  </script>
+
+  <div id="example2"></div>
+  <script type="text/babel">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <h1>{this.props.name}, Come on baby, We make love!</h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage name="Myra Ma" />,
+        document.getElementById('example2')
+      );
+  </script>
+
+  <div id="example3"></div>
+  <script type="text/babel">
+   var WebSite = React.createClass({
+      render: function() {
+        return (
+          <div>
+            <Name name={this.props.name} />
+          </div>
+        );
+      }
+    });
+
+    var Name = React.createClass({
+      render: function() {
+        return (
+          <h1>{this.props.name}</h1>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <WebSite name="Myra." />,
+      document.getElementById('example3')
+    );
+    </script>
+</body>
+</html>
