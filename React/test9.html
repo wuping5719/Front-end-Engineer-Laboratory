@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+  <div id="example1"></div>
+  <script type="text/babel">
+    var LoveMessage = React.createClass({
+      getInitialState: function() {
+        return {value: 'I love Myra Ma!'};
+      },
+      handleChange: function(event) {
+        this.setState({value: event.target.value});
+      },
+      render: function() {
+        var value = this.state.value;
+        return <div>
+                <input type="text" value={value} onChange={this.handleChange} />
+                <h4>{value}</h4>
+               </div>;
+      }
+    });
+    ReactDOM.render(
+      <LoveMessage />,
+      document.getElementById('example1')
+    );
+  </script>
+
+  <div id="example2"></div>
+  <script type="text/babel">
+    var Content = React.createClass({
+      render: function() {
+        return  <div>
+                <input type="text" value={this.props.myDataProp} onChange={this.props.updateStateProp} />
+                <h4>{this.props.myDataProp}</h4>
+                </div>;
+      }
+    });
+    var LoveMessage = React.createClass({
+      getInitialState: function() {
+        return {value: 'I love Myra Ma!'};
+      },
+      handleChange: function(event) {
+        this.setState({value: event.target.value});
+      },
+      render: function() {
+        var value = this.state.value;
+        return <div>
+                <Content myDataProp = {value}
+                  updateStateProp = {this.handleChange}></Content>
+               </div>;
+      }
+    });
+    ReactDOM.render(
+      <LoveMessage />,
+      document.getElementById('example2')
+    );
+  </script>
+
+  <div id="example3"></div>
+  <script type="text/babel">
+    var LoveMessage = React.createClass({
+      getInitialState: function() {
+        return {value: 'I love Myra Ma!'};
+      },
+      handleChange: function(event) {
+        this.setState({value: 'My girl is Myra.'})
+      },
+      render: function() {
+        var value = this.state.value;
+        return <div>
+                <button onClick={this.handleChange}>Love Myra</button>
+                <h4>{value}</h4>
+               </div>;
+      }
+    });
+    ReactDOM.render(
+      <LoveMessage />,
+      document.getElementById('example3')
+    );
+  </script>
+
+  <div id="example4"></div>
+  <script type="text/babel">
+    var Content = React.createClass({
+      render: function() {
+        return  <div>
+                  <button onClick = {this.props.updateStateProp}>Love Myra</button>
+                  <h4>{this.props.myDataProp}</h4>
+               </div>
+      }
+    });
+    var LoveMessage = React.createClass({
+      getInitialState: function() {
+        return {value: 'I love Myra Ma!'};
+      },
+      handleChange: function(event) {
+        this.setState({value: 'Myra with me make love!'})
+      },
+      render: function() {
+        var value = this.state.value;
+        return <div>
+                <Content myDataProp = {value}
+                  updateStateProp = {this.handleChange}></Content>
+               </div>;
+      }
+    });
+    ReactDOM.render(
+      <LoveMessage />,
+      document.getElementById('example4')
+    );
+  </script>
+</body>
+</html>
