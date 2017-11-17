@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+  <div id="example"></div>
+  <script type="text/babel">
+      var MyGist = React.createClass({
+        getInitialState: function() {
+          return {
+            username: '',
+            lastGistUrl: ''
+          };
+        },
+
+        componentDidMount: function() {
+          this.serverRequest = $.get(this.props.source, function (result) {
+            var lastGist = result[0];
+            this.setState({
+              username: lastGist.owner.login,
+              lastGistUrl: lastGist.html_url
+            });
+          }.bind(this));
+        },
+
+        componentWillUnmount: function() {
+          this.serverRequest.abort();
+        },
+
+        render: function() {
+          return (
+            <div>
+              {this.state.username} I love Myra Ma：
+              <a href={this.state.lastGistUrl}>{this.state.lastGistUrl}</a>
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <MyGist source="https://github.com/wuping5719" />,
+        document.getElementById('example')
+      );
+  </script>
+</body>
+</html>
