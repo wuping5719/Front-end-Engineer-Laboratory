@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app1">
+     <p>{{ message }}</p>
+  </div>
+  <script>
+    new Vue({
+       el: '#app1',
+       data: {
+         message: 'I love Myra Ma!'
+       }
+    })
+  </script>
+
+  <div id="app2">
+    <div v-html="message"></div>
+  </div>
+  <script>
+   new Vue({
+      el: '#app2',
+      data: {
+         message: '<h1>Nick love Myra!</h1>'
+      }
+   })
+  </script>
+
+  <style>
+    .class1 {
+       background: #444;
+       color: #eee;
+    }
+  </style>
+  <div id="app3">
+     <label for="r1">修改颜色</label><input type="checkbox" v-model="class1" id="r1">
+     <br><br>
+     <div v-bind:class="{'class1': class1}">
+        directiva v-bind:class
+     </div>
+  </div>
+  <script>
+   new Vue({
+	    el: '#app3',
+      data:{
+  	    class1: false
+      }
+   });
+  </script>
+
+  <div id="app4">
+	   {{ 10 * 10 }} <br>
+	   {{ ok ? 'YES' : 'NO' }}<br>
+	   {{ message.split('').reverse().join('') }}
+	   <div v-bind:id="'list-' + id">I love Myra Ma!</div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app4',
+       data: {
+	        ok: true,
+          message: 'Myra',
+	        id : 1
+       }
+    })
+  </script>
+
+  <div id="app5">
+    <p v-if="seen">Nick Love Myra Ma!</p>
+    <template v-if="ok">
+      <h1>My girl is Myra</h1>
+      <p>I love you! Myra.</p>
+      <p>Come on baby, Myra！</p>
+    </template>
+ </div>
+ <script>
+   new Vue({
+     el: '#app5',
+     data: {
+       seen: true,
+       ok: true
+     }
+   })
+ </script>
+
+ <div id="app6">
+    <pre><a v-bind:href="url">I love Myra Ma!</a></pre>
+ </div>
+ <script>
+   new Vue({
+     el: '#app6',
+     data: {
+        url: 'https://github.com/wuping5719'
+     }
+   })
+ </script>
+
+ <div id="app7">
+    <p>{{ message }}</p>
+    <input v-model="message">
+ </div>
+ <script>
+   new Vue({
+      el: '#app7',
+      data: {
+         message: 'I love Myra!'
+      }
+   })
+ </script>
+
+ <div id="app8">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Myra</button>
+ </div>
+ <script>
+   new Vue({
+     el: '#app8',
+     data: {
+        message: 'I love Myra!'
+     },
+     methods: {
+        reverseMessage: function () {
+           this.message = this.message.split('').reverse().join('')
+        }
+     }
+   })
+  </script>
+
+  <div id="app9">
+     {{ message | capitalize }}
+  </div>
+  <script>
+   new Vue({
+     el: '#app9',
+     data: {
+	      message: 'i love Myra Ma!'
+     },
+     filters: {
+        capitalize: function (value) {
+           if (!value) return ''
+           value = value.toString()
+           return value.charAt(0).toUpperCase() + value.slice(1)
+        }
+     }
+   })
+  </script>
+
+</body>
+</html>
