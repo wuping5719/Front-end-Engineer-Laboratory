@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <style>
+    .active {
+       width: 100px;
+       height: 100px;
+       background: green;
+    }
+    .text-danger {
+	    background: red;
+    }
+  </style>
+  <div id="app1">
+     <div class="static"
+        v-bind:class="{ active: isActive, 'text-danger': hasError }">
+     </div>
+  </div>
+  <script>
+   new Vue({
+     el: '#app1',
+     data: {
+       isActive: true,
+	     hasError: true
+     }
+   })
+  </script>
+
+  <div id="app2">
+     <div v-bind:class="{ active: isActive }"></div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app2',
+      data: {
+         isActive: true
+      }
+    })
+  </script>
+
+  <div id="app3">
+     <div v-bind:class="classObject"></div>
+  </div>
+  <script>
+   new Vue({
+     el: '#app3',
+     data: {
+        classObject: {
+           active: true,
+           'text-danger': true
+        }
+     }
+   })
+  </script>
+
+  <div id="app4">
+     <div v-bind:class="classObject"></div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app4',
+      data: {
+         isActive: true,
+         error: null
+      },
+      computed: {
+         classObject: function () {
+            return {
+               active: this.isActive && !this.error,
+               'text-danger': this.error && this.error.type === 'fatal',
+            }
+         }
+      }
+   })
+  </script>
+
+  <div id="app5">
+	   <div v-bind:class="[activeClass, errorClass]"></div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app5',
+       data: {
+          activeClass: 'active',
+          errorClass: 'text-danger'
+       }
+    })
+  </script>
+
+  <div id="app6">
+	   <div v-bind:class="[errorClass ,isActive ? activeClass : '']"></div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app6',
+       data: {
+          isActive: true,
+	        activeClass: 'active',
+          errorClass: 'text-danger'
+       }
+    })
+  </script>
+
+  <div id="app7">
+	    <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">I live Myra!</div>
+  </div>
+  <script>
+     new Vue({
+        el: '#app7',
+        data: {
+           activeColor: 'green',
+	         fontSize: 30
+        }
+     })
+  </script>
+
+  <div id="app8">
+     <div v-bind:style="styleObject">I love Myra!</div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app8',
+       data: {
+          styleObject: {
+             color: 'red',
+             fontSize: '30px'
+          }
+       }
+    })
+  </script>
+
+  <div id="app9">
+     <div v-bind:style="[baseStyles, overridingStyles]">I love Myra!</div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app9',
+       data: {
+          baseStyles: {
+             color: 'red',
+             fontSize: '30px'
+          },
+	        overridingStyles: {
+             'font-weight': 'bold'
+          }
+       }
+    })
+  </script>
+</body>
+</html>
