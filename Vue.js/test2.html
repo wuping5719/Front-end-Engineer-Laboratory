@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app1">
+    <p v-if="seen">I love Myra!</p>
+    <template v-if="ok">
+      <h1>Myra Ma, My girl.</h1>
+      <p>Dear Myra Ma.</p>
+      <p>I love you, Myra！</p>
+    </template>
+  </div>
+  <script>
+    new Vue({
+       el: '#app1',
+       data: {
+         seen: true,
+         ok: true
+       }
+    })
+  </script>
+
+  <div id="app2">
+	   <div v-if="Math.random() > 0.5">
+	      I love Myra!
+	   </div>
+	   <div v-else>
+	      My girl Myra.
+	   </div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app2'
+    })
+  </script>
+
+  <div id="app3">
+    <div v-if="type === 'A'">A</div>
+	  <div v-else-if="type === 'B'">B</div>
+	  <div v-else-if="type === 'C'">C</div>
+	  <div v-else>Not A/B/C</div>
+  </div>
+  <script>
+    new Vue({
+       el: '#app3',
+       data: {
+          type: 'C'
+       }
+    })
+  </script>
+
+  <div id="app4">
+     <h1 v-show="ok">I love Myra Ma!</h1>
+  </div>
+  <script>
+    new Vue({
+       el: '#app4',
+       data: {
+          ok: true
+       }
+    })
+  </script>
+</body>
+</html>
