@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app1">
+     <button v-on:click="counter += 1">增加 1</button>
+     <p>I love Myra {{ counter }} * 100 year.</p>
+  </div>
+  <script>
+    new Vue({
+      el: '#app1',
+      data: {
+         counter: 1
+      }
+    })
+  </script>
+
+  <div id="app2">
+     <!-- `greet` 是在下面定义的方法名 -->
+     <button v-on:click="greet">Greet</button>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+         name: 'Myra'
+      },
+      // 在 `methods` 对象中定义方法
+      methods: {
+         greet: function (event) {
+            // `this` 在方法里指当前 Vue 实例
+            alert('I love ' + this.name + '!')
+            // `event` 是原生 DOM 事件
+	          if (event) {
+		           alert(event.target.tagName)
+	          }
+         }
+      }
+   })
+   // 也可以用 JavaScript 直接调用方法
+   app.greet() // -> 'I love Myra!'
+  </script>
+
+  <div id="app3">
+     <button v-on:click="say('I love Myra!')">Myra</button>
+     <button v-on:click="say('Nick love Myra!')">Nick</button>
+  </div>
+  <script>
+    new Vue({
+      el: '#app3',
+      methods: {
+         say: function (message) {
+            alert(message)
+         }
+      }
+    })
+  </script>
+</body>
+</html>
