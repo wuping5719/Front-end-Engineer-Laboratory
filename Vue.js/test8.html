@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+   BootCDN 是 Bootstrap 中文网和又拍云共同支持并维护的前端开源项目免费 CDN 服务，
+  由又拍云提供全部 CDN 支持，致力于为 Bootstrap、jQuery、Angular、Vuejs
+  一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。
+  BootCDN 所收录的开源项目主要同步于 cdnjs 仓库。
+-->
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+</head>
+<body>
+  <div id="app1">
+	  <myra></myra>
+  </div>
+  <script>
+   // 注册
+   Vue.component('myra', {
+      template: '<h1>I love Myra!</h1>'
+   })
+   // 创建根实例
+   new Vue({
+      el: '#app1'
+   })
+  </script>
+
+  <div id="app2">
+	   <nick></nick>
+  </div>
+  <script>
+    var Child = {
+       template: '<h1>Nick love Myra!</h1>'
+    }
+    // 创建根实例
+    new Vue({
+       el: '#app2',
+       components: {
+          // <nick> 将只在父模板可用
+          'nick': Child
+       }
+    })
+  </script>
+
+  <div id="app3">
+	   <child message="My girlfriend is Myra!"></child>
+  </div>
+  <script>
+    // 注册
+    Vue.component('child', {
+       // 声明 props
+       props: ['message'],
+       // 同样也可以在 vm 实例中像 “this.message” 这样使用
+       template: '<span>{{ message }}</span>'
+    })
+    // 创建根实例
+    new Vue({
+       el: '#app3'
+    })
+  </script>
+
+  <div id="app4">
+	  <div>
+	     <input v-model="parentMsg">
+	     <br>
+	     <child v-bind:message="parentMsg"></child>
+	  </div>
+  </div>
+  <script>
+    // 注册
+    Vue.component('child', {
+      // 声明 props
+      props: ['message'],
+      // 同样也可以在 vm 实例中像 “this.message” 这样使用
+      template: '<span>{{ message }}</span>'
+    })
+    // 创建根实例
+    new Vue({
+       el: '#app4',
+       data: {
+	       parentMsg: 'I love Myra Ma!'
+       }
+    })
+  </script>
+
+  <div id="app5">
+	  <ol>
+       <todo-item v-for="item in sites" v-bind:todo="item"></todo-item>
+  	</ol>
+  </div>
+  <script>
+    Vue.component('todo-item', {
+       props: ['todo'],
+       template: '<li>{{ todo.text }}</li>'
+    })
+    new Vue({
+       el: '#app5',
+       data: {
+          sites: [
+             { text: 'Myra' },
+             { text: 'Nick' },
+             { text: 'Taobao' }
+          ]
+       }
+    })
+  </script>
+
+  <div id="app6">
+	  <div id="counter-event">
+	    <p>{{ total }}</p>
+	    <button-counter v-on:increment="incrementTotal"></button-counter>
+	    <button-counter v-on:increment="incrementTotal"></button-counter>
+	  </div>
+  </div>
+  <script>
+     Vue.component('button-counter', {
+        template: '<button v-on:click="increment">{{ counter }}</button>',
+        data: function () {
+           return {
+             counter: 1
+           }
+        },
+        methods: {
+           increment: function () {
+              this.counter += 1
+              this.$emit('increment')
+           }
+        },
+    })
+    new Vue({
+       el: '#counter-event',
+          data: {
+             total: 1
+          },
+          methods: {
+             incrementTotal: function () {
+                 this.total += 1
+             }
+          }
+    })
+  </script>
+</body>
+</html>
